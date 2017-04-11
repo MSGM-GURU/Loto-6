@@ -1,0 +1,128 @@
+body {
+    font-family: Microsoft JhengHei;
+    font-weight: bold;
+}
+
+.logo {
+    background-image: url(../images/taiwanlottery2.jpg);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.sidenav {
+    padding: 0px;
+    background-color: #FFDF00;
+    height: 100%;
+}
+
+.leftMenu {
+    color: #fff;
+}
+
+.menuHead {
+    padding: 10px 15px;
+    background-color: #49265E;
+}
+
+.menuBody {
+    padding: 10px 15px;
+    background-color: #5D4470;
+}
+
+.menuBody:hover {
+    background-color: #7A638A;
+}
+
+/* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 700px;}
+    
+    /* Set gray background color and 100% height */
+    
+    
+
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (min-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+
+    @media screen and (min-width: 1449px) {
+      .sidenav {
+        height: 1080px;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+
+
+.nav li a:link {
+    background-color: rgb(73,38,94);
+    color:rgb(255,255,255);
+}
+.nav li a:visited {
+    background-color: rgb(73,38,94);
+    color:rgb(255,255,255);
+}
+.nav li a:hover {
+    background-color:rgb(122,99,138);
+    color:rgb(255,255,255);
+}
+.nav li a:active {
+    color:rgb(255,255,255);
+    background-color:rgb(122,99,138);
+}
+
+
+
+.childmenu li a:link{
+    background-color:RGB(122,99,138);
+}
+
+.childmenu li a:visited{
+    color:rgb(255,255,255);
+}
+.childmenu li a:hover{
+    background-color:rgb(93,68,112);
+    color:rgb(255,255,255);
+    text-decoration:none;
+}
+.childmenu li a:active{
+    color:rgb(255,255,255);
+}
+
+.childmenu li{
+    margin:0px 30px;
+    text-decoration:none;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li a {
+   /* display: block;
+    width: 60px;*/
+}
+
+.btn {
+    cursor:pointer;
+    border:solid;
+    border-width:1px;
+    color:rgb(108,108,108);
+}

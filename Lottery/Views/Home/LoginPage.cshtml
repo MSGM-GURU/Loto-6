@@ -1,0 +1,64 @@
+﻿@{
+    Layout="";
+}
+@model Lottery.Models.UserViewModel
+<html>
+    <head>
+        <link rel="stylesheet" href="~/css/LoginStyle.css"/>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class="loginPage">
+            <div class="mainPage">
+                <div class="leftPage leftRWDPage">
+                </div>
+                <div class="rightPage rightRWDPage">
+                    <div class="loginForm">
+                        @using(Html.BeginForm())
+                        {
+                            <label class="labelInForm">帳號</label>
+                            <input type="text" class="textInForm" id="Account" name="Account" value="@Model.Account">
+                            <label class="labelInForm">密碼</label>
+                            <input type="password" class="textInForm" id="Password" name="Password" value="@Model.Password">
+                            <input type="checkbox" id="rememberMe" class="rememberMe" name="rememberMe" value="true">                            
+                            <label for="rememberMe" class="rememberMeLabel">記住帳號密碼</label>
+                            <button type="submit" class="buttonInForm">登入</button>
+                            <button type="submit" class="buttonInForm" onClick="window.close()">離開</button>
+                        }
+                    </div>        
+                </div>
+            </div>
+        </div>
+
+        <script>
+            $(function()
+            {
+                if($("#Account").val() != "" && $("#Password").val() != "")
+                {
+                    $("#rememberMe").prop("checked", true);
+                }
+            });
+
+            $(function() {
+                $('#Account, #Password').keypress(function(event) 
+                {
+                    var patt = new RegExp('^\\w+$', 'g');
+                    if (8 == (window.event ? event.keyCode : event.which)) 
+                    { 
+                        return ture; 
+                    }
+                    return patt.test(String.fromCharCode((window.event ? event.keyCode : event.which)));
+                });
+            });
+
+            $(function () {
+                $('#Account, #Password').bind('cut copy paste', function (event) 
+                {
+                    event.preventDefault();
+                    alert("禁止複製貼上");
+                });
+            });
+        </script>
+    </body>
+</html>
+

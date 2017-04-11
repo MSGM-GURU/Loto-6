@@ -9,7 +9,7 @@ namespace Lottery.Controllers
 
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        public IActionResult LoginPage()
         {
             var model = new UserViewModel();
             if(Request.Cookies["User"] != null) 
@@ -20,7 +20,7 @@ namespace Lottery.Controllers
         }
 
         [HttpPost]
-        public IActionResult Index(UserViewModel model, bool RememberMe)
+        public IActionResult LoginPage(UserViewModel model, bool RememberMe)
         {
             if(model.Account == "admin" && model.Password == "123")
             {
@@ -35,12 +35,12 @@ namespace Lottery.Controllers
                 {
                     Response.Cookies.Delete("User");
                 }
-                return RedirectToAction("About");
+                return RedirectToAction("Index");
             } 
             return View(new UserViewModel());
         }
 
-        public IActionResult About()
+        public IActionResult Index()
         {
             ViewData["Message"] = "Your application description page.";
 
@@ -55,6 +55,11 @@ namespace Lottery.Controllers
         }
 
         public IActionResult Error()
+        {
+            return View();
+        }
+
+        public IActionResult Test()
         {
             return View();
         }
