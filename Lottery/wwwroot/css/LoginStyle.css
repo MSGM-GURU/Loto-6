@@ -33,6 +33,7 @@ label{
 }
 
 input[type = text], input[type = password]{
+    font-size: .83em;
     border-color: #D7AED7;
     border-radius: 5px;
     width: 95%;    
@@ -114,7 +115,6 @@ input[type=checkbox].rememberMe+label.rememberMeLabel {
     }
 
     input[type = text], input[type = password] {
-        font-size: 15px;
         min-width: 192px;
         max-width: 271px;
     }
@@ -162,7 +162,6 @@ input[type=checkbox].rememberMe+label.rememberMeLabel {
     }
 
     input[type = text], input[type = password] {
-        font-size: 10px;
         min-width: 125px
     }
 
@@ -181,7 +180,7 @@ input[type=checkbox].rememberMe+label.rememberMeLabel {
     input[type=checkbox].rememberMe+label.rememberMeLabel {
         padding-left: 21px;
         height: 15px;
-        font-size: 12px;
+        font-size: .86em;
         line-height: 16px;
     }
 }
