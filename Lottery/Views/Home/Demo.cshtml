@@ -1,0 +1,101 @@
+@{
+    Layout = "";
+}
+<html lang="zh-Hant-TW">
+    <head>
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="~/css/DemoStyle.css">
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    </head>
+    <meta charset="utf-8"></meta>
+    <body>
+        <div class="fullPage">
+            <div class="mainPage">
+                <div class="topNav">
+                    <div class="logoLink">
+                        <a asp-controller="Home" asp-action="Index">
+                            <div class="logo">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="toolbar">
+                        <div class="separate"></div>
+                        <div class="toolButton functionButton">
+                            <h4>&nbsp;
+                                <span class="glyphicon glyphicon-plus">
+                                </span> 
+                                <br>新增
+                            </h4>
+                        </div>
+                        <div class="toolButton functionButton">
+                            <h4>&nbsp;
+                                <span class="glyphicon glyphicon-pencil">
+                                </span> 
+                                <br>修改
+                            </h4>
+                        </div>
+                        <div class="toolButton functionButton">
+                            <h4>&nbsp;
+                                <span class="glyphicon glyphicon-remove">
+                                </span> 
+                                <br>作廢
+                            </h4>                            
+                        </div>
+                        <div class="toolButton functionButton">
+                            <h4>&nbsp;
+                                <span class="glyphicon glyphicon-search">
+                                </span> 
+                                <br>查詢
+                            </h4>
+                        </div>
+                        <div class="toolButton homeButton">
+                            <h4>&nbsp;
+                                <span class="glyphicon glyphicon-home">
+                                </span> 
+                                <br>首頁
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottomContent">
+                    <div class="leftMenu" id="leftMenu">
+                        <div class="menuGroup">
+                            <div class="menuHead collapsed" data-parent="#leftMenu" data-toggle="collapse" href="#userMenuBody">使用者設定</div>
+                            <div class="collapse" id="userMenuBody">
+                                <div class="menuBody">使用者帳號設定</div>
+                                <div class="menuBody">使用者帳號設定1</div>
+                            </div>
+                        </div>
+                        <div class="menuGroup">
+                            <div class="menuHead collapsed" data-parent="#leftMenu" data-toggle="collapse" href="#otherMenuBody">使用者設定1</div>
+                            <div class="collapse" id="otherMenuBody">
+                                <div class="menuBody">Hi</div>
+                            </div>
+                        </div>
+                        <div class="menuGroup">
+                            <div class="menuHead collapsed" data-parent="#leftMenu" data-toggle="collapse" href="#otherMenuBody">使用者設定1</div>
+                            <div class="collapse" id="otherMenuBody">
+                                <div class="menuBody">Hi</div>
+                            </div>
+                        </div>
+                        <div class="menuGroup">
+                            <div class="menuHead collapsed" data-parent="#leftMenu" data-toggle="collapse" href="#otherMenuBody">使用者設定1</div>
+                            <div class="collapse" id="otherMenuBody">
+                                <div class="menuBody">Hi</div>
+                            </div>
+                        </div>
+                        <div class="menuGroup">
+                            <div class="menuHead collapsed" data-parent="#leftMenu" data-toggle="collapse" href="#otherMenuBody">使用者設定1</div>
+                            <div class="collapse" id="otherMenuBody">
+                                <div class="menuBody">Hi</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mainContent">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
