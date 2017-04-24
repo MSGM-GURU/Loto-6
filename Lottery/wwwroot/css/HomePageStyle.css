@@ -5,7 +5,6 @@ body {
     margin: 0px;
 }
 
-/* * set whole page backgroud color * */
 .fullPage {
     overflow: auto;
     background-color: #FFFFC4;
@@ -18,37 +17,138 @@ body {
     box-shadow: 0 0 15px #555;
 }
 
-/* *********************** */
-/* **left navigation bar** */
-.leftNav {
-    float: left;
-    padding: 0px;
-    background-color: #FFDF00;
-    height: 100%;
-    width: 30%;
+.topNav {
+    height: 16%;
+    position: relative;
+    border-bottom-color: #555;
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+    background: linear-gradient(to bottom,#ffdf00 75%, #d8be00 100%);
+    box-shadow: 0 0 5px #555;
+}
+
+.logoLink { 
+    width: 25%;
 }
 
 .logo {
-    background-image: url(../images/taiwanlottery2.jpg);
-    background-size: 100% auto;
+    background-image: url(../images/taiwanlottery_nobg.png);
+    background-size: 85% auto;
     background-repeat: no-repeat;
     background-position: center;
-    height: 20%;
+    height: 100%;
     width: 100%;
 }
 
+.toolbar {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 70%;
+    height: 75%;
+}
+
+.separate {
+    height: 100%;
+    width: 4px;
+    float: left;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    background-image: url(../images/separate02.png);
+    background-size: auto 100%;
+}
+
+.homeButton {
+    float: right;
+    background-position: left;
+}
+
+div.functionButton {
+    float: left;
+    background-position: right;
+}
+
+.toolButton {
+    height: 100%;
+    width: 15%;
+    align-items: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    background-image: url(../images/separate02.png);
+    background-size: auto 100%;
+    display: flex;
+    cursor: pointer;
+}
+
+.toolButton h4 {
+    font-family: Microsoft JhengHei;
+    font-weight: bold;
+    text-shadow: -1px -1px 0 #FEFFAA;
+    margin: 0px 30px 0px 29px;
+    align-items: center;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.toolButton:hover {
+    color: #555;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.bottomContent {
+    height: 84%;
+    background-color: #FFD;
+    padding: 60px 0px;
+}
+
+.leftMenuBlock {
+    float: left;
+    width: 30%;
+    padding: 0px 5px 0px 30px;
+}
+
 .leftMenu {
+    width: 100%;
     color: #fff;
+}
+
+.top-border-radius{
+    border-top-left-radius:7px;
+    border-top-right-radius:7px;
+}
+
+.down-border-radius{
+    border-bottom-right-radius:7px;
+    border-bottom-left-radius:7px
 }
 
 .menuGroup {
     margin: 1px;
     box-shadow: 0 0 5px #3A1F4B;
+    cursor:pointer;
+}
+
+.triangle-right {
+    display: inline-block;
+    margin-right: 15px;
+    border-right: 4px solid #c09ccb;
+    border-bottom: 4px solid #c09ccb;
+    width: 10px;
+    height: 10px;
+    transform: rotate(-45deg);
+    transition: all 0.5s;
+ }
+
+ .arrowRotate{
+    transform: rotate(45deg);
 }
 
 .menuHead {
     padding: 10px 15px;
     background-color: #49265E;
+    font-size: 1.1em;
+    display:flex;
+    align-items: center;
 }
 
 .menuBody {
@@ -59,168 +159,32 @@ body {
 .menuBody:hover {
     background-color: #7A638A;
 }
-/* **left navigation bar** */
-/* *********************** */
 
-/* * right part * */
 .mainContent {
-    float: right;
     width: 70%;
+    float: right;
 }
 
-/* *********************** */
-/* ******* toolbar ******* */
-/* * toolbar block * */
-.topContent {
-    background-color: #eee;
-    box-shadow: 0px 2px 2px #888;
-    height: 20%;
-    display: flex;
-    align-items: center;
+.bulletin {
+    padding: 20px;
+    height: 50%;
+    background-color: #FFF;
+    border-width: 5px;
+    border-color: #FFF;
+    border-radius: 5px;
+    border-style: solid;
+    box-shadow: 1px 1px 3px #555, 0 1px 3px #555 inset, 1px 0px 3px #555 inset;
+    background: linear-gradient(to bottom,#F0F0F0 5%, #FFF 50%);
 }
 
-/* * left toolbutton * */
-/* * be used on new modify delete search * */
-.leftButton {
-    margin: 10px;
+.systemBulletin {
+    margin: 0px 35px 0px 35px;
 }
 
-/* * right toolbutton * */
-/* * be used on home * */
-.rightButton {
-    margin: 10px 10px 10px 125px;
+.userBulletin {
+    margin: 20px 35px 20px 35px;    
 }
 
-.toolbutton {
-	width: 100px;
-    height: 60px;
-	text-shadow: -2px -1px 0 #6a3382;
-	background: linear-gradient(to bottom,#9b59b6, #8e44ad);
-	background-color: #9b59b6;
-	border: 1px solid;
-	border-color: #6a3382;
-	border-radius: 5px;
-	box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset, 0 -1px 0 rgba(255, 255, 255, .1) inset, 0 4px 0 #6a3382, 0 4px 2px rgba(0, 0, 0, .5);
-}
-
-.toolbutton:hover {
-	background: linear-gradient(to bottom,#8e44ad, #9b59b6);
-}
-
-/* * toolbutton click animation * */
-.push {
-	position: relative;
-	text-align: center;
-	color: #FFF;
-	line-height: 43px;
-	display: block;
-}
-
-.push:active:before{
-	top: -11px;
-	bottom: -4px;
-	content: "";
-}
-
-.push:active {
-	box-shadow:0 1px 0 rgba(255, 255, 255, .5) inset, 0 -1px 0 rgba(255, 255, 255, .1) inset;
-	top:4px;
-}
-/* ******* toolbar ******* */
-/* *********************** */
-
-/* * user main content * */
-.bottomContent {
-    background-color: #fff;
-    height: 80%;
-}
-/* ***************************** */
-
-
-
-/* not modify yet */
-/* Remove the navbar's default margin-bottom and rounded borders */ 
-    .navbar {
-      margin-bottom: 0;
-      border-radius: 0;
-    }
-    
-    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-    .row.content {height: 700px;}
-    
-    /* Set gray background color and 100% height */
-    
-    
-
-    
-    /* On small screens, set height to 'auto' for sidenav and grid */
-    @media screen and (min-width: 767px) {
-      .sidenav {
-        height: auto;
-        padding: 15px;
-      }
-      .row.content {height:auto;} 
-    }
-
-    @media screen and (min-width: 1449px) {
-      .sidenav {
-        height: 1080px;
-        padding: 15px;
-      }
-      .row.content {height:auto;} 
-    }
-
-
-.nav li a:link {
-    background-color: rgb(73,38,94);
-    color:rgb(255,255,255);
-}
-.nav li a:visited {
-    background-color: rgb(73,38,94);
-    color:rgb(255,255,255);
-}
-.nav li a:hover {
-    background-color:rgb(122,99,138);
-    color:rgb(255,255,255);
-}
-.nav li a:active {
-    color:rgb(255,255,255);
-    background-color:rgb(122,99,138);
-}
-
-
-
-.childmenu li a:link{
-    background-color:RGB(122,99,138);
-}
-
-.childmenu li a:visited{
-    color:rgb(255,255,255);
-}
-.childmenu li a:hover{
-    background-color:rgb(93,68,112);
-    color:rgb(255,255,255);
-    text-decoration:none;
-}
-.childmenu li a:active{
-    color:rgb(255,255,255);
-}
-
-.childmenu li{
-    margin:0px 30px;
-    text-decoration:none;
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-
-.btn {
-    cursor:pointer;
-    border:solid;
-    border-width:1px;
-    color:rgb(108,108,108);
+.bulletin h4 {
+    font-weight: bold;
 }

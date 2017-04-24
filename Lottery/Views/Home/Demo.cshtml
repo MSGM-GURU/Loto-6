@@ -12,44 +12,69 @@
     <body>
         <div class="fullPage">
             <div class="mainPage">
-                <div class="topNav">
-                    <div class="logoLink">
-                        <a asp-controller="Home" asp-action="Index">
-                            <div class="logo">
+                <div class="leftNav">
+                    <a asp-controller="Home" asp-action="Index"><div class="logo"></div></a>
+                    <div class="leftMenu" id="leftMenu">
+                        <div class="menuGroup">
+                            <div class="menuHead">
+                                <div class="triangle-right fixHorizontal">                                
+                                </div>
+                                <div class="collapsed fixHorizontalPadding" data-parent="#leftMenu" data-toggle="collapse" href="#userMenuBody">
+                                    使用者設定
+                                </div>
                             </div>
-                        </a>
+                            <div class="collapse" id="userMenuBody">
+                                <div class="menuBody">使用者帳號設定</div>
+                                <div class="menuBody">使用者帳號設定1</div>
+                            </div>
+                        </div>
+                        <div class="menuGroup">
+                            <div class="menuHead collapsed" data-parent="#leftMenu" data-toggle="collapse" href="#otherMenuBody">
+                                <div class="triangle-right fixHorizontal">                                
+                                </div>
+                                使用者設定1
+                            </div>
+                            <div class="collapse" id="otherMenuBody">
+                                <div class="menuBody">Hi</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="toolbar">
-                        <div class="separate"></div>
-                        <div class="toolButton functionButton">
+                </div>
+                <div class="mainContent">
+                    <div class="topContent">
+                        <div class="toolbutton push leftButton">
                             <h4>&nbsp;
                                 <span class="glyphicon glyphicon-plus">
                                 </span> 
                                 <br>新增
                             </h4>
                         </div>
-                        <div class="toolButton functionButton">
+                            
+                        <div class="toolbutton push leftButton">
                             <h4>&nbsp;
                                 <span class="glyphicon glyphicon-pencil">
                                 </span> 
                                 <br>修改
                             </h4>
                         </div>
-                        <div class="toolButton functionButton">
+                        
+                        <div class="toolbutton push leftButton">
                             <h4>&nbsp;
                                 <span class="glyphicon glyphicon-remove">
                                 </span> 
                                 <br>作廢
-                            </h4>                            
+                            </h4>
                         </div>
-                        <div class="toolButton functionButton">
+                        
+                        <div class="toolbutton push leftButton">
                             <h4>&nbsp;
                                 <span class="glyphicon glyphicon-search">
                                 </span> 
                                 <br>查詢
                             </h4>
                         </div>
-                        <div class="toolButton homeButton">
+                        
+                        <div class="rightButton toolbutton push">
                             <h4>&nbsp;
                                 <span class="glyphicon glyphicon-home">
                                 </span> 
@@ -57,45 +82,19 @@
                             </h4>
                         </div>
                     </div>
-                </div>
-                <div class="bottomContent">
-                    <div class="leftMenu" id="leftMenu">
-                        <div class="menuGroup">
-                            <div class="menuHead collapsed" data-parent="#leftMenu" data-toggle="collapse" href="#userMenuBody">使用者設定</div>
-                            <div class="collapse" id="userMenuBody">
-                                <div class="menuBody">使用者帳號設定</div>
-                                <div class="menuBody">使用者帳號設定1</div>
-                            </div>
-                        </div>
-                        <div class="menuGroup">
-                            <div class="menuHead collapsed" data-parent="#leftMenu" data-toggle="collapse" href="#otherMenuBody">使用者設定1</div>
-                            <div class="collapse" id="otherMenuBody">
-                                <div class="menuBody">Hi</div>
-                            </div>
-                        </div>
-                        <div class="menuGroup">
-                            <div class="menuHead collapsed" data-parent="#leftMenu" data-toggle="collapse" href="#otherMenuBody">使用者設定1</div>
-                            <div class="collapse" id="otherMenuBody">
-                                <div class="menuBody">Hi</div>
-                            </div>
-                        </div>
-                        <div class="menuGroup">
-                            <div class="menuHead collapsed" data-parent="#leftMenu" data-toggle="collapse" href="#otherMenuBody">使用者設定1</div>
-                            <div class="collapse" id="otherMenuBody">
-                                <div class="menuBody">Hi</div>
-                            </div>
-                        </div>
-                        <div class="menuGroup">
-                            <div class="menuHead collapsed" data-parent="#leftMenu" data-toggle="collapse" href="#otherMenuBody">使用者設定1</div>
-                            <div class="collapse" id="otherMenuBody">
-                                <div class="menuBody">Hi</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mainContent">
+                    <div class="bottomContent">
                     </div>
                 </div>
             </div>
         </div>
+        <script>
+             $(document).ready(function(){
+                $(".menuHead").each(function(index,ele){
+                    $(this).on("click",function(){ 
+                        $(this).children(".triangle-right").toggleClass('arrowRotate');
+                    });
+                });
+            });
+        </script>
     </body>
 </html>
