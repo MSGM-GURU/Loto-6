@@ -62,7 +62,7 @@
                     <div class="leftMenuBlock">
                         <div class="leftMenu" id="leftMenu">
                             <div class="menuGroup">
-                                <div class="menuHead collapsed" data-parent="#leftMenu" data-toggle="collapse" href="#userMenuBody">
+                                <div class="menuHead" child="#userMenuBody">
                                     <div class ="triangle-right"></div>
                                     使用者設定
                                 </div>
@@ -72,7 +72,7 @@
                                 </div>
                             </div>
                             <div class="menuGroup">
-                                <div class="menuHead collapsed" data-parent="#leftMenu" data-toggle="collapse" href="#otherMenuBody">
+                                <div class="menuHead" child="#otherMenuBody">
                                     <div class ="triangle-right"></div>
                                     使用者設定1
                                 </div>
@@ -81,7 +81,7 @@
                                 </div>
                             </div>
                             <div class="menuGroup">
-                                <div class="menuHead collapsed" data-parent="#leftMenu" data-toggle="collapse" href="#testMenuBody">
+                                <div class="menuHead" child="#testMenuBody">
                                     <div class ="triangle-right"></div>
                                     使用者設定1
                                 </div>
@@ -108,9 +108,20 @@
            $(document).ready(function(){
                 $(".menuHead").each(function(index,ele){
                     $(this).on("click",function(){ 
+                        if($(this).children(".triangle-right").attr('class').indexOf("arrowRotate") < 0) {
+                            $(".menuHead").children(".triangle-right").removeClass('arrowRotate');
+                        }
                         $(this).children(".triangle-right").toggleClass('arrowRotate');
                     });
                 });
+            });
+
+            $(".menuHead").click(function(){
+                var child = $(this).attr('child');
+                if($(child).css("display") === "none"){
+                    $(".collapse").slideUp();
+                }
+                $(child).slideToggle()
             });
         </script>
     </body>
