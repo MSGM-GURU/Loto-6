@@ -1,0 +1,186 @@
+body {
+    font-family: Microsoft JhengHei;
+    display: block;
+    margin: 0px;
+}
+
+.loginPage{
+    overflow: auto;
+    background-color: #FFDF00;
+}
+
+.mainPage{
+    margin: 0px auto;
+    width:  72%;
+    height: 100%;
+}
+
+.leftPage {
+    background-image: url(../images/taiwanlottery2.jpg);
+    background-size: 90% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.rightPage {
+    position: relative;
+    font-weight: bold;
+    color: #742C74;
+}
+
+label{
+    display: block;
+}
+
+input[type = text], input[type = password]{
+    font-size: .83em;
+    border-color: #D7AED7;
+    border-radius: 5px;
+    width: 95%;    
+    padding: 1.1% 3.33%;
+    margin-bottom: 4%;
+}
+
+button{
+    width: 85%;
+    margin: 5% 4% 4% 4%;
+    padding: 1.7% 9%;
+    text-align: center;
+    background: linear-gradient(#C488C4, #742C74);
+    background-color: #742C74;
+    box-shadow: inset 0 1px 1px #E7CDE7;
+    border: 1px solid;
+    border-color: #C488C4;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    letter-spacing: 1px;
+    position: relative;
+    text-shadow: 0 1px 2px rgba(0,0,0,.5);
+}
+
+label.rememberMeLabel {
+	background-image: url(../images/checkbox.png);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+input[type=checkbox].rememberMe {
+	position: absolute;
+	z-index: -1000;
+	left: -1000px;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	width: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+}
+
+input[type=checkbox].rememberMe+label.rememberMeLabel {
+    display: block;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    cursor: pointer;
+}
+
+/* **screen bigger than 860px** */
+@media only screen and (min-width: 860px) {
+    .leftRWDPage {
+        width: 70%;
+        height: 100%;
+        float: left;
+    }
+
+    .rightRWDPage {
+        font-size: 18px;
+        position: relative;
+        margin-right: 6.8%;
+        width: 23.2%;
+        height: 100%;
+        float: right;        
+    }
+
+    .loginForm {
+        position: absolute;
+        width: 100%;
+        top: calc(50% - 105px);
+        margin: 10px;
+    }
+
+    input[type = text], input[type = password] {
+        min-width: 192px;
+        max-width: 271px;
+    }
+
+    button {
+        min-width: 172px;
+        max-width: 243px;
+    }
+
+    label.rememberMeLabel {
+        background-size: 25px;
+    }
+
+    input[type=checkbox].rememberMe:checked+label.rememberMeLabel {
+        background-position: 0 -22px;
+    }
+
+    input[type=checkbox].rememberMe+label.rememberMeLabel {
+        padding-left: 30px;
+        height: 21px;
+        line-height: 25px;
+    }
+}
+
+/* **screen small than 860px** */
+@media only screen and (max-width: 860px) {
+    .leftRWDPage {
+        width: 100%;
+        height: 40%;
+    }
+
+    .rightRWDPage{
+        font-size: 14px;
+        position: relative;
+        width: 100%;
+        height: 60%;
+    }
+
+    .loginForm {
+        position: absolute;
+        width: 37%;
+        min-width: 125px;
+        left: calc(50% - 18.5%);
+        margin: 10px;
+    }
+
+    input[type = text], input[type = password] {
+        min-width: 125px
+    }
+
+    button {
+        min-width: 112px;
+    }
+
+    label.rememberMeLabel {
+        background-size: 17px;
+    }
+
+    input[type=checkbox].rememberMe:checked+label.rememberMeLabel {
+	    background-position: 0 -14px;
+    }
+
+    input[type=checkbox].rememberMe+label.rememberMeLabel {
+        padding-left: 21px;
+        height: 15px;
+        font-size: .86em;
+        line-height: 16px;
+    }
+}
