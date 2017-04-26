@@ -1,0 +1,29 @@
+@model IEnumerable<Lottery.Models.Cars>
+@{
+  ViewBag.Title = "Cars";
+}
+<h2>Car models</h2>
+<p>
+  <a asp-controller="Cars" asp-action="Create">Add New</a>
+</p>
+<table class="table">
+  <tr>
+    <th>Car Model</th>
+    <th>Brand</th>
+  </tr>
+  @foreach (var item in Model)
+  {
+    <tr>
+      <td>
+        @Html.DisplayFor(modelItem => item.CarModel)
+      </td>
+      <td>
+        @Html.DisplayFor(modelItem => item.Brand)
+      </td>
+      <td>
+        <a asp-controller="Cars" asp-action="Delete"
+          asp-route-id="@item.Id">Delete</a>
+      </td>
+    </tr>
+  }
+</table>
