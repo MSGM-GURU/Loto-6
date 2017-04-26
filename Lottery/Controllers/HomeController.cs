@@ -6,7 +6,7 @@ using Newtonsoft.Json;
 
 namespace Lottery.Controllers
 {
-
+    //
     public class HomeController : Controller
     {
         public IActionResult LoginPage()

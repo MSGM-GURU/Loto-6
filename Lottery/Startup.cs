@@ -7,8 +7,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-
-namespace lottery
+using Microsoft.EntityFrameworkCore;
+using Lottery.Models;
+namespace Lottery
 {
     public class Startup
     {
@@ -27,6 +28,10 @@ namespace lottery
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+            var connection=   "Data Source=140.125.84.191,49172;Initial Catalog=Cars;User ID=MSGM;Password=asdf1234";
+            services.AddMyServiceDependencies(connection);
+          
             // Add framework services.
             services.AddMvc();
         }
@@ -55,6 +60,18 @@ namespace lottery
                     name: "default",
                     template: "{controller=Home}/{action=LoginPage}/{id?}");
             });
+        }
+    }
+        public static class ServiceCollectionExtensions
+    {
+        public static IServiceCollection AddMyServiceDependencies(this IServiceCollection services, string connectionString)
+        {
+             services.AddEntityFrameworkSqlServer()
+            .AddDbContext<CarsContext>((serviceProvider, options) =>
+            options.UseSqlServer(connectionString)
+                   .UseInternalServiceProvider(serviceProvider)
+                   );
+             return services;
         }
     }
 }

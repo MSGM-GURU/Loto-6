@@ -1,8 +1,16 @@
-d:\Levi's\Levi's WorkShop\Lottery\bin\Debug\netcoreapp1.1\lottery.deps.json
-d:\Levi's\Levi's WorkShop\Lottery\bin\Debug\netcoreapp1.1\lottery.runtimeconfig.json
-d:\Levi's\Levi's WorkShop\Lottery\bin\Debug\netcoreapp1.1\lottery.runtimeconfig.dev.json
-d:\Levi's\Levi's WorkShop\Lottery\bin\Debug\netcoreapp1.1\lottery.dll
-d:\Levi's\Levi's WorkShop\Lottery\bin\Debug\netcoreapp1.1\lottery.pdb
-d:\Levi's\Levi's WorkShop\Lottery\obj\Debug\netcoreapp1.1\lottery.AssemblyInfo.cs
-d:\Levi's\Levi's WorkShop\Lottery\obj\Debug\netcoreapp1.1\lottery.dll
-d:\Levi's\Levi's WorkShop\Lottery\obj\Debug\netcoreapp1.1\lottery.pdb
+d:/Levi's/Levi's WorkShop/Lottery/bin/Debug/netcoreapp1.1/lottery.deps.json
+d:/Levi's/Levi's WorkShop/Lottery/bin/Debug/netcoreapp1.1/lottery.runtimeconfig.json
+d:/Levi's/Levi's WorkShop/Lottery/bin/Debug/netcoreapp1.1/lottery.runtimeconfig.dev.json
+d:/Levi's/Levi's WorkShop/Lottery/bin/Debug/netcoreapp1.1/lottery.dll
+d:/Levi's/Levi's WorkShop/Lottery/bin/Debug/netcoreapp1.1/lottery.pdb
+d:/Levi's/Levi's WorkShop/Lottery/obj/Debug/netcoreapp1.1/lottery.AssemblyInfo.cs
+d:/Levi's/Levi's WorkShop/Lottery/obj/Debug/netcoreapp1.1/lottery.dll
+d:/Levi's/Levi's WorkShop/Lottery/obj/Debug/netcoreapp1.1/lottery.pdb
+/Users/chenyihua/Documents/Project/Loto/Loto-6/Lottery/bin/Debug/netcoreapp1.1/lottery.deps.json
+/Users/chenyihua/Documents/Project/Loto/Loto-6/Lottery/bin/Debug/netcoreapp1.1/lottery.runtimeconfig.json
+/Users/chenyihua/Documents/Project/Loto/Loto-6/Lottery/bin/Debug/netcoreapp1.1/lottery.runtimeconfig.dev.json
+/Users/chenyihua/Documents/Project/Loto/Loto-6/Lottery/bin/Debug/netcoreapp1.1/lottery.dll
+/Users/chenyihua/Documents/Project/Loto/Loto-6/Lottery/bin/Debug/netcoreapp1.1/lottery.pdb
+/Users/chenyihua/Documents/Project/Loto/Loto-6/Lottery/obj/Debug/netcoreapp1.1/lottery.AssemblyInfo.cs
+/Users/chenyihua/Documents/Project/Loto/Loto-6/Lottery/obj/Debug/netcoreapp1.1/lottery.dll
+/Users/chenyihua/Documents/Project/Loto/Loto-6/Lottery/obj/Debug/netcoreapp1.1/lottery.pdb
